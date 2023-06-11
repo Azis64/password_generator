@@ -8,7 +8,32 @@
     <title>Random Password Generator</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="line">
+            <span class="box"></span>
+        </div>
+        <div class="line">
+            <label for="passwordLength">Password length</label>  
+            <input type="number" class="right" id="Password">
+        </div>
+        <div class="line">
+            <label for="upperCase">Contains Uppercase Letter</label>
+            <input type="checkbox" class="right" value = "QWERTYUIOPASDFGHJKLZXCVBNM">
+        </div>
+        <div class="line">
+            <label for="lowerCase">Contains Lower Letter</label>
+            <input type="checkbox" class="right" value="qwertyuiopasdfghjklzxcvbnm">
+        </div>
+        <div class="line">
+            <label for="number">Contains Number</label>
+            <input type="checkbox" class="right" value = "1234567890">
+        </div>
+        <div class="line">
+            <label for="number">Contains Symbol</label>
+            <input type="checkbox" class="right" value = "~!@#$%^&*()_+~:">
+        </div>
+        <div class="button">Generate Password</div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
