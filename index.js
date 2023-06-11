@@ -1,22 +1,35 @@
-var generatePasswordButton = document.querySelectorAll(".button")[0];
-var passwordLength = document.getElementById("Password");
-
 var displayBox = document.getElementsByClassName("box")[0];
+
 var checkboxes = document.querySelectorAll("input[type=checkbox]");
+
 var strings = [];
+
+var generatePasswordButton = document.querySelectorAll(".button")[0];
 
 
 
 generatePasswordButton.addEventListener("click", function(){
-    passwordLength = Number(passwordLength.value);
-
-    if(passwordLength==0){
-        displayBox.innerHTML = "Please input the password length!"
-    }
-    displayBox.innerHTML = passwordLength;
+    // check the password length input
+    var passwordLength = document.getElementById("Password");
+    passwordLength = parseInt(passwordLength.value);
     console.log(passwordLength);
+    if(passwordLength <= 0 || isNaN(passwordLength)){
+        displayBox.innerHTML = "Please enter a number larger than 0!";
+        return;
+    }
+    // see if any checkbox is checked
+    if(strings.length === 0){
+        displayBox.innerHTML = "Please check at least one box!";
+        return;
+    }
+    // output the result password
+    var resultPassword = "";
+    for(var i = 0; i < passwordLength; i++){
+        resultPassword += letterGenerator(); 
+    }
+    displayBox.innerHTML = resultPassword;
 
-})
+});
 
 // for gererating the random string
 for(var i = 0; i < checkboxes.length; i++){
@@ -33,12 +46,11 @@ for(var i = 0; i < checkboxes.length; i++){
     });
 }
 
-function randomGenerator(){
+function letterGenerator(){
+
     const selectedIndex = Math.floor(Math.random()*strings.length);   
+    
     const selectedElement = Math.floor(Math.random()*strings[selectedIndex].length); 
     return strings[selectedIndex][selectedElement];
 }
 
-for(var i = 0; i < 10; i++){
-    console.log(randomGenerator);
-}
