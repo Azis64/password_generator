@@ -1,30 +1,126 @@
 body{
-    /* margin: 0;
-    padding: 0;
-    position: relative;
-    size: 30px; */
+
+    background-color: #5800FF;
+    color: #72FFFF;
     display: flex;
     justify-content: center;
-    background-color: #090580;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type = "checkbox"]{
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    
+    display: grid;
+    place-content: center;
+}
+
+.form-control + .form-control {
+margin-top: 1em;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+
+    display: grid;
+    place-content: center;
+
+    background-color: CanvasText;
+
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
 }
 
 
 
 .container{
-    margin-top: 100px;
+    background-color: #0096FF;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 2px solid #72FFFF;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #46458c;
-    border-radius: 10px;
+    flex-direction: column;
+    
 }
 
-.line{
-    width: 100%;
-    justify-content: space-between;
+.form{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
 }
 
-.button{
-    background-color: blue;
+.title{
+    margin: 0;
     text-align: center;
 }
 
+.generateBtn{
+    grid-column: span 2;
+    background-color: #00D7FF;
+    color: #72FFFF;
+    border: #72FFFF;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.generateBtn:hover{
+    background-color: #5800FF;
+}
+
+.generateBtn:focus{
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+}
+
+.pwDisplay{
+    background-color: aliceblue;
+    color: #00D7FF;
+    padding: 1rem;
+    border: 1px solid #72FFFF;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 350px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    word-break: break-all;
+}
 

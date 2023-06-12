@@ -1,10 +1,10 @@
-var displayBox = document.getElementsByClassName("box")[0];
+var displayBox = document.getElementsByClassName("pwDisplay")[0];
 
 var checkboxes = document.querySelectorAll("input[type=checkbox]");
 
 var strings = [];
 
-var generatePasswordButton = document.querySelectorAll(".button")[0];
+var generatePasswordButton = document.querySelectorAll(".generateBtn")[0];
 
 
 

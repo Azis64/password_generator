@@ -9,30 +9,33 @@
 </head>
 <body>
     <div class="container">
-        <div class="line">
-            <span class="box"></span>
-        </div>
-        <div class="line">
+        <h1 class="title">Password Generator</h1>
+        <h3 class="pwDisplay">Generate a Password!</h3>
+        
+        <form class="form">
             <label for="passwordLength">Password length</label>  
-            <input type="number" class="right" id="Password">
-        </div>
-        <div class="line">
-            <label for="upperCase">Contains Uppercase Letter</label>
-            <input type="checkbox" class="right" value = "QWERTYUIOPASDFGHJKLZXCVBNM">
-        </div>
-        <div class="line">
-            <label for="lowerCase">Contains Lower Letter</label>
-            <input type="checkbox" class="right" value="qwertyuiopasdfghjklzxcvbnm">
-        </div>
-        <div class="line">
-            <label for="number">Contains Number</label>
-            <input type="checkbox" class="right" value = "1234567890">
-        </div>
-        <div class="line">
-            <label for="number">Contains Symbol</label>
-            <input type="checkbox" class="right" value = "~!@#$%^&*()_+~:">
-        </div>
-        <div class="button">Generate Password</div>
+        <input type="number" class="right" id="Password">
+
+
+        <label for="upperCase">Contains Uppercase Letter</label>
+        <input type="checkbox" class="checkbox" value = "QWERTYUIOPASDFGHJKLZXCVBNM">
+
+
+        <label for="lowerCase">Contains Lower Letter</label>
+        <input type="checkbox" class="checkbox" value="qwertyuiopasdfghjklzxcvbnm">
+
+
+        <label for="number">Contains Number</label>
+        <input type="checkbox" class="checkbox" value = "1234567890">
+
+
+        <label for="symbol">Contains Symbol</label>
+        <input type="checkbox" class="checkbox" value = "~!@#$%^&*()_+~:">
+
+
+        </form>
+        <button type="submit" class="generateBtn">Generate Password</button>
+            
     </div>
     <script src="index.js"></script>
 </body>
